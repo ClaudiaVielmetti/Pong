@@ -1,0 +1,26 @@
+/*helps make sizing easier and easier to read*/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #333;
+}
+/*Main paddle class with individual paddles */
+.paddle {
+  position: absolute;
+  background-color: white;
+  width: 1vh;
+  height: 10vh;
+}
+
+.paddle.left {
+  left: 1vw;
+}
+
+.paddle.right {
+  right: 1vw;
+}
