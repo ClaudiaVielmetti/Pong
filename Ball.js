@@ -57,7 +57,7 @@ export default class Ball {
       this.direction.y *= -1;
     }
     if (paddleRects.some(r => isCollision(r, rect))) {
-      this.direction.x *= -1;
+      this.direction.x *= -1
     }
   }
     
