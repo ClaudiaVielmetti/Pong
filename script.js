@@ -12,24 +12,23 @@ const playerScoreElem = document.getElementById("player-score")
 const computerScoreElem = document.getElementById("computer-score")
 
 //use the ball element inside the update loop
-let lastTime;
+let lastTime
 function update(time) {
   if (lastTime != null) {
-    const delta = time - lastTime;
-    ball.update(delta,[playerPaddle.rect(),computerPaddle.rect()])
+    const delta = time - lastTime
+    ball.update(delta, [playerPaddle.rect(), computerPaddle.rect()])
     computerPaddle.update(delta, ball.y)
-    const hue = parseFloat(getComputedStyle(document.documentElement).getPropertyPriority("--hue"))
+    const hue = parseFloat(
+      getComputedStyle(document.documentElement).getPropertyValue("--hue")
+    )
 
-    document.documentElement.style.setProperty("--hue", hue + delta *0.01)
+    document.documentElement.style.setProperty("--hue", hue + delta * 0.01)
 
-    
-
-    
+    if (isLose()) handleLose()
   }
 
-
-  lastTime = time;
-  window.requestAnimationFrame(update);
+  lastTime = time
+  window.requestAnimationFrame(update)
 }
 
 function isLose(){
