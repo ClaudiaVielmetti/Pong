@@ -10,7 +10,7 @@ let lastTime;
 function update(time) {
   if (lastTime != null) {
     const delta = time - lastTime;
-    ball.update(delta);
+    // ball.update(delta);
   }
   lastTime = time;
   window.requestAnimationFrame(update);
