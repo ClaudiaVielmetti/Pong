@@ -11,6 +11,7 @@ body {
 }
 
 /*Main paddle class with individual paddles */
+
 .paddle {
   position: absolute;
   background-color: white;
