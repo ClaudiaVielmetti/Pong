@@ -43,8 +43,8 @@ export default class Ball {
   }
 
   update(delta) {
-    this.x = 5;
-    this.y = 15;
+    this.x += this.direction.x * this.velocity * delta
+    this.y += this.direction.y * this.velocity * delta
   }
 }
 
