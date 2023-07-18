@@ -4,7 +4,7 @@ import { handle } from "express/lib/application.js";
 import Ball from "./Ball.js";
 import Paddle from "./Paddle.js";
 
-//selecting the ball html element and creating a new class for that ball to get access here
+//selecting the  html element and creating a new class to get access here
 const ball = new Ball(document.getElementById("ball"))
 const playerPaddle = new Paddle(document.getElementById("player-paddle"))
 const computerPaddle = new Paddle(document.getElementById("computer-paddle"))
