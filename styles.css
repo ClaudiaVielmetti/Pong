@@ -13,8 +13,14 @@ body {
 /*Main paddle class with individual paddles */
 
 .paddle {
+    /*create a variable for the position of the paddles
+    to be able to change it easier in js*/
+  --position: 50;
+
   position: absolute;
   background-color: white;
+  top: calc(var(--position) * 1vh);
+  transform: translateY(-50%);
   width: 1vh;
   height: 10vh;
 }
