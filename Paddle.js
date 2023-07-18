@@ -1,6 +1,7 @@
 export default class Paddle {
   constructor(paddleElem) {
     this.paddleElem = paddleElem;
+    this.reset();
   }
 
   get position() {
