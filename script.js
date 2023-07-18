@@ -8,7 +8,7 @@ const ball = new Ball(document.getElementById("ball"));
 //use the ball element inside the update loop
 let lastTime;
 function update(time) {
-  if (lastTime) {
+  if (lastTime != null) {
     const delta = time - lastTime;
     ball.update(delta);
   }
