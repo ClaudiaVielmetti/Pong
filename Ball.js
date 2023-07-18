@@ -22,6 +22,10 @@ export default class Ball {
     this.ballElem.style.setProperty("--y", value);
   }
 
+  rect() {
+    return this.ballElem.getBoundingClientRect()
+  }
+
   //display the ball and make it move
   reset() {
     this.x = 50;
@@ -45,7 +49,16 @@ export default class Ball {
   update(delta) {
     this.x += this.direction.x * this.velocity * delta
     this.y += this.direction.y * this.velocity * delta
+    const rect = this.rect()
+
+    if (rect.bottom >= window.innerHeight || rect.top <= 0) {
+      this.direction.y *= -1;
+    }
+    if (rect.right >= window.innerHeight || rect.left <= 0) {
+      this.direction.x *= -1;
+    }
   }
+    
 }
 
 function randomNumberBetween(min, max) {
