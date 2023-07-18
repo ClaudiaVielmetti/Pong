@@ -1,7 +1,7 @@
 // the game will run in an update loop - every frame will have a function called
 // this will update the positions and the logic
 import Ball from "./Ball.js";
-import Ball from "./Paddle.js";
+import Paddle from "./Paddle.js";
 
 //selecting the ball html element and creating a new class for that ball to get access here
 const ball = new Ball(document.getElementById("ball"))
