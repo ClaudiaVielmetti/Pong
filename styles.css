@@ -9,6 +9,7 @@ body {
   margin: 0;
   background-color: #333;
 }
+
 /*Main paddle class with individual paddles */
 .paddle {
   position: absolute;
