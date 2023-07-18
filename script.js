@@ -5,8 +5,8 @@ import Paddle from "./Paddle.js";
 
 //selecting the ball html element and creating a new class for that ball to get access here
 const ball = new Ball(document.getElementById("ball"))
-const playerPaddle = new paddle(document.getElementById("player-paddle"))
-const computerPaddle = new paddle(document.getElementById("computer-paddle"))
+const playerPaddle = new Paddle(document.getElementById("player-paddle"))
+const computerPaddle = new Paddle(document.getElementById("computer-paddle"))
 
 //use the ball element inside the update loop
 let lastTime;
