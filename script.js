@@ -1,6 +1,6 @@
 // the game will run in an update loop - every frame will have a function called
 // this will update the positions and the logic
-import { handle } from "express/lib/application.js";
+
 import Ball from "./Ball.js";
 import Paddle from "./Paddle.js";
 
